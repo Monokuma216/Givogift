@@ -1,6 +1,14 @@
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
+import antfu from '@antfu/eslint-config'
 
-export default withNuxt(
-  // Your custom configs here
-)
+export default antfu({
+  // Ваши пользовательские настройки
+  vue: true,
+  typescript: true,
+  // Игнорируем определенные файлы и директории
+  ignores: [
+    'node_modules',
+    '.nuxt',
+    'dist',
+  ],
+})
