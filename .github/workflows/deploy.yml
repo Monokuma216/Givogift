@@ -14,6 +14,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+      # Создаем .env файл до установки зависимостей
+      - name: Create .env file
+        run: |
+          echo "GOOGLE_DOC_ID=${{ secrets.GOOGLE_DOC_ID }}" >> .env
+          echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
       # Pick your own package manager and build script
       - run: npm install
       - run: npx nuxt build --preset github_pages
@@ -39,3 +44,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v3
+
+      - name: Create .env file
+        run: |
+          echo "GOOGLE_DOC_ID=${{ secrets.GOOGLE_DOC_ID }}" >> .env
+          echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
