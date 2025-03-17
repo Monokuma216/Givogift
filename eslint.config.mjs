@@ -3,7 +3,7 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu({
   // Ваши пользовательские настройки
-  vue: true,
+    vue: true,
   typescript: true,
   // Игнорируем определенные файлы и директории
   ignores: [
@@ -11,4 +11,8 @@ export default antfu({
     '.nuxt',
     'dist',
   ],
+  rules: {
+    indent: ['error', 4],
+    "styled/indent": ['error', 4],
+  },
 })
