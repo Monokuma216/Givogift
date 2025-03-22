@@ -20,8 +20,6 @@
 /* } */
 
 .dark {
-    --ui-bg: var(--color-zinc-900);
-
     * {
         &::-webkit-scrollbar-thumb {
             border-radius: 0.6em;

@@ -21,4 +21,11 @@ export default defineNuxtConfig({
         GOOGLE_DOC_ID: process.env.GOOGLE_DOC_ID,
         GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
     },
+
+    nitro: {
+        routeRules: {
+            "/api/graphql/**": { cors: true },
+            "/ws": { proxy: "ws://localhost:3000" },
+        },
+    },
 });
