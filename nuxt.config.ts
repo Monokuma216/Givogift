@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         typeCheck: true,
     },
 
-    modules: ["@nuxt/eslint", "@nuxt/ui"],
+    modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxt/devtools"],
     eslint: {
         config: {
             stylistic: true,
