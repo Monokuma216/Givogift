@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { useBreakpoints } from "@vueuse/core";
-
 const tabs = ref([
     {
         label: "Желаемое",
@@ -24,23 +22,12 @@ const tabs = ref([
     },
 ]);
 
-// Изначально устанавливаем tabSize как "sm" для согласованности между сервером и клиентом
-const tabSize = ref<"xs" | "sm" | "md" | "lg" | "xl" | undefined>("sm");
+const { tabSize } = useAppBreakpoints();
 
-// Перенесем логику breakpoints внутрь onMounted
 onMounted(() => {
-    const breakpoints = useBreakpoints({
-        xs: 0,
-        sm: 640,
-        md: 768,
-        lg: 1024,
-    });
-
-    const isLaptop = breakpoints.smaller("lg");
-
     // Следим за изменениями и обновляем tabSize только на клиенте
     watch(
-        isLaptop,
+        tabSize,
         (value) => {
             tabSize.value = value ? "xs" : "sm";
         },
