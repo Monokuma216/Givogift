@@ -22,6 +22,11 @@ export default defineNuxtConfig({
         GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
     },
 
+    colorMode: {
+        preference: "system",
+        fallback: "light",
+    },
+
     nitro: {
         routeRules: {
             "/api/graphql/**": { cors: true },
