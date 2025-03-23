@@ -26,7 +26,7 @@ const isActive = (index: number) => {
                 :key="index"
                 variant="ghost"
                 icon="i-lucide-star"
-                class="m-0 pulse"
+                class="m-0 active:bg-(--ui-primary)/20"
                 :class="{ 'bg-(--ui-primary)/10': isActive(index) }"
                 @mouseenter="handleHover(index)"
                 @mouseleave="() => (hoveredRating = 0)"
@@ -36,21 +36,4 @@ const isActive = (index: number) => {
     </div>
 </template>
 
-<style lang="scss">
-.pulse:active {
-    animation: pulse-color 0.2s ease-in;
-}
-
-@keyframes pulse-color {
-    0% {
-        @apply bg-(--ui-primary)/10;
-    }
-    50% {
-        @apply bg-(--ui-primary)/20;
-    }
-}
-
-.test {
-    @apply bg-(--ui-primary);
-}
-</style>
+<style lang="scss"></style>
