@@ -24,18 +24,28 @@ const tabs = ref([
     },
 ]);
 
-const breakpoints = useBreakpoints({
-    xs: 0,
-    sm: 640,
-    md: 768,
-    lg: 1024,
-});
+// Изначально устанавливаем tabSize как "sm" для согласованности между сервером и клиентом
+const tabSize = ref<"xs" | "sm" | "md" | "lg" | "xl" | undefined>("sm");
 
-const isLaptop = breakpoints.smaller("lg");
+// Перенесем логику breakpoints внутрь onMounted
+onMounted(() => {
+    const breakpoints = useBreakpoints({
+        xs: 0,
+        sm: 640,
+        md: 768,
+        lg: 1024,
+    });
 
-const tabSize = computed(() => {
-    if (isLaptop.value) return "xs";
-    return "sm";
+    const isLaptop = breakpoints.smaller("lg");
+
+    // Следим за изменениями и обновляем tabSize только на клиенте
+    watch(
+        isLaptop,
+        (value) => {
+            tabSize.value = value ? "xs" : "sm";
+        },
+        { immediate: true }
+    );
 });
 </script>
 
