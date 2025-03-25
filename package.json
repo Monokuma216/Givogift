@@ -9,24 +9,27 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/devtools": "^2.3.1",
     "@nuxt/eslint": "^1.1.0",
-    "@nuxt/ui": "^3.0.0-alpha.13",
-    "@types/markdown-it": "^14.1.2",
+    "@nuxt/ui": "^3.0.1",
     "eslint": "^9.20.1",
-    "markdown-it": "^14.1.0",
-    "markdown-it-task-lists": "^2.1.1",
-    "nuxt": "^3.15.4",
+    "nuxt": "^3.16.1",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.3.0",
     "@iconify-json/lucide": "^1.2.26",
+    "@nuxt/test-utils": "^3.17.2",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^17.4.4",
     "node-sass": "^9.0.0",
+    "playwright-core": "^1.51.1",
     "sass": "^1.85.0",
     "sass-embedded": "^1.85.0",
     "sass-loader": "^16.0.5",
-    "typescript": "^5.7.3",
-    "vue-tsc": "^2.1.10"
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9",
+    "vue-tsc": "^2.2.2"
   }
 }

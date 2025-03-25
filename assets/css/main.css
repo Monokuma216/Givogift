@@ -1,2 +1,18 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+.dark {
+    * {
+        &::-webkit-scrollbar-thumb {
+            border-radius: 0.6em;
+            --tw-bg-opacity: 1;
+            background-color: var(--ui-primary);
+        }
+
+        &::-webkit-scrollbar {
+            background-color: var(--color-zinc-700);
+            height: 0.6em;
+            width: 0.6em;
+        }
+    }
+}
