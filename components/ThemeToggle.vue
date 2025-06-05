@@ -1,28 +1,28 @@
 <script setup lang="ts">
-const colorMode = useColorMode();
+const colorMode = useColorMode()
 
 // Используем явную переменную для отслеживания текущей темы
-const currentTheme = ref( colorMode.value );
+const currentTheme = ref(colorMode.value)
 
 // Обновляем currentTheme при изменении colorMode.value
-watch( () => colorMode.value, ( newValue ) => {
-  currentTheme.value = newValue;
-}, { immediate: true } );
+watch(() => colorMode.value, (newValue) => {
+  currentTheme.value = newValue
+}, { immediate: true })
 
 // Функция для переключения темы
 function toggleTheme() {
-  colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
+  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
 
 // Добавим флаг для отслеживания готовности компонента
-const isClient = ref( false );
+const isClient = ref(false)
 
 // Устанавливаем флаг после маунтинга компонента
-onMounted( () => {
-  isClient.value = true;
+onMounted(() => {
+  isClient.value = true
   // Принудительно синхронизируем currentTheme после монтирования на клиенте
-  currentTheme.value = colorMode.value;
-} );
+  currentTheme.value = colorMode.value
+})
 </script>
 
 <template>

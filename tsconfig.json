@@ -1,9 +1,44 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "typeRoots": ["./types", "./node_modules/@types"],
-    "strict": true,
-    "noImplicitAny": true,
-  }
+	"compilerOptions": {
+		// Включает строгий режим, включает все нижеперечисленные флаги строгой проверки
+		"strict": true,
+		// Запрещает неявно тип any
+		"noImplicitAny": true,
+		// Запрещает неиспользуемые локальные переменные
+		"noUnusedLocals": true,
+		// Запрещает неиспользуемые параметры функций
+		"noUnusedParameters": true,
+		// Запрещает неявный возврат типа any из функций
+		"noImplicitReturns": true,
+		// Запрещает переменные с типом any при захвате переменных
+		"noImplicitThis": true,
+		// Запрещает Fallthrough в switch-case
+		"noFallthroughCasesInSwitch": true,
+		// Проверяет сравнения на соответствии типов
+		"strictNullChecks": true,
+		// Запрещает override без ключевого слова override
+		"noImplicitOverride": true,
+		// Сообщает о попытках переназначения const-переменных
+		"useUnknownInCatchVariables": true,
+		// Указывает базовую директорию для поиска файлов
+		"baseUrl": ".",
+		// Использовать последние возможности языка
+		"target": "ES2021",
+		// Использовать динамический импорт
+		"module": "ESNext",
+		// Создаёт исходные карты для отладки
+		"sourceMap": true,
+		// Позволяет импортировать JSON-файлы
+		"resolveJsonModule": true,
+		// Использует новые модули node и для ESM
+		"moduleResolution": "node",
+		// Не позволяет компилировать при ошибках
+		"noEmitOnError": true,
+		// Поддержка декораторов
+		"experimentalDecorators": true,
+		// Проверка типов при spread/assign
+		"strictBindCallApply": true,
+		// Проверка типов в циклах for..in
+		"strictPropertyInitialization": true
+	}
 }
