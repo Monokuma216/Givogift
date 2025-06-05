@@ -17,14 +17,11 @@ export default defineNuxtConfig({
     },
     css: ['~/assets/css/main.css'],
 
-    runtimeConfig: {
-        GOOGLE_DOC_ID: process.env.GOOGLE_DOC_ID,
-        GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
-    },
-
     colorMode: {
         preference: 'system',
         fallback: 'light',
+        classSuffix: '',
+        storageKey: 'nuxt-color-mode',
     },
 
     nitro: {
