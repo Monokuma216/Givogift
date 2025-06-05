@@ -12,8 +12,6 @@ export default antfu({
     'dist',
   ],
   rules: {
-    indent: ['error', 4],
-    "styled/indent": ['error', 4],
-    "jsx-first-prop-new-line": ['error', 'always'],
+    indent: ['error', 2],
   },
 })
