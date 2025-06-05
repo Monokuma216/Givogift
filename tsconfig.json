@@ -1,5 +1,7 @@
 {
+	"extends": "./.nuxt/tsconfig.json",
 	"compilerOptions": {
+		"typeRoots": ["./types", "./node_modules/@types"],
 		// Включает строгий режим, включает все нижеперечисленные флаги строгой проверки
 		"strict": true,
 		// Запрещает неявно тип any
