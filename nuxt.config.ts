@@ -1,37 +1,39 @@
 // off eslint
-/* eslint-disable node/prefer-global/process */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    compatibilityDate: '2024-11-01',
-    devtools: { enabled: true },
-
-    typescript: {
-        typeCheck: true,
+  compatibilityDate: '2024-11-01',
+  devtools: {enabled: true},
+  
+  typescript: {
+    typeCheck: true,
+  },
+  
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/devtools', '@nuxthub/core'],
+  eslint: {
+    config: {
+      stylistic: true,
     },
-
-    modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/devtools', '@nuxthub/core'],
-    eslint: {
-        config: {
-            stylistic: true,
-        },
+  },
+  css: ['~/assets/css/main.css'],
+  
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+    classSuffix: '',
+    storageKey: 'nuxt-color-mode',
+  },
+  
+  nitro: {
+    // routeRules: {
+    //   '/api/graphql/**': {cors: true},
+    //   '/ws': {proxy: 'ws://localhost:3000'},
+    // },
+    experimental: {
+      tasks: true,
     },
-    css: ['~/assets/css/main.css'],
-
-    colorMode: {
-        preference: 'system',
-        fallback: 'light',
-        classSuffix: '',
-        storageKey: 'nuxt-color-mode',
-    },
-
-    nitro: {
-        routeRules: {
-            '/api/graphql/**': { cors: true },
-            '/ws': { proxy: 'ws://localhost:3000' },
-        },
-    },
-
-    hub: {
-        database: true,
-    },
+  },
+  
+  hub: {
+    database: true,
+  },
 });
