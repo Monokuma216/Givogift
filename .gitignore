@@ -28,3 +28,4 @@ logs
 /server/database/migrations/0000_empty_marten_broadcloak.sql
 /server/database/migrations/0001_large_hardball.sql
 /identifier.sqlite
+/server/database/migrations/
