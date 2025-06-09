@@ -1,13 +1,16 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "db:seed": "npx nitropack-cli tasks run db:seed",
+    "test:api": "node scripts/test-api.js"
   },
   "dependencies": {
     "@nuxt/devtools": "^2.5.0",
