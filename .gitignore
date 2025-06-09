@@ -22,3 +22,10 @@ logs
 .env
 .env.*
 !.env.example
+/server/database/migrations/meta/0000_snapshot.json
+/server/database/migrations/meta/0001_snapshot.json
+/server/database/migrations/meta/_journal.json
+/server/database/migrations/0000_empty_marten_broadcloak.sql
+/server/database/migrations/0001_large_hardball.sql
+/identifier.sqlite
+/server/database/migrations/
