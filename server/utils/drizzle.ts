@@ -1,4 +1,5 @@
 import { drizzle } from 'drizzle-orm/d1';
+import { hubDatabase } from '@nuxthub/core';
 
 export { sql, eq, and, or } from 'drizzle-orm';
 
