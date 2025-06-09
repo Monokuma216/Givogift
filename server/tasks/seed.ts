@@ -1,3 +1,5 @@
+import { useDrizzle, tables } from '../utils/drizzle';
+
 export default defineTask({
   meta: {
     name: 'db:seed',
