@@ -13,6 +13,7 @@ export default [
   },
   {
     files: ['**/*.{ts,tsx}'],
+    ...js.configs.recommended,
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -30,6 +31,7 @@ export default [
   },
   {
     files: ['**/*.vue'],
+    ...js.configs.recommended,
     languageOptions: {
       parser: await import('vue-eslint-parser').then(m => m.default || m),
       parserOptions: {
