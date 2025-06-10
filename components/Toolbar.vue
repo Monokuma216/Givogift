@@ -28,7 +28,5 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-.toolbar {
 
-}
 </style>

@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+@theme {
+    --px: 16px;
+    --py: 16px;
+}
+
 .dark {
     * {
         &::-webkit-scrollbar-thumb {

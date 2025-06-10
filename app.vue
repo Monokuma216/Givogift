@@ -1,18 +1,1 @@
-<template>
-  <UApp>
-    <NuxtLayout>
-      <NavBar/>
-      <div class="content-container pb-[56px] md:pb-0">
-        <NuxtPage/>
-      </div>
-      <Toolbar/>
-    </NuxtLayout>
-  </UApp>
-</template>
-
-<style>
-.content-container {
-  min-height: calc(100dvh - 64px);
-  overflow: auto;
-}
-</style>
+<template>  <UApp>    <NuxtLayout>      <NavBar />      <div        class="pb-[calc(56px+var(--py))] pt-[calc(64px+var(--py))] md:pt-[calc(72px+var(--py))] md:pb-[var(--py)] min-h-[calc(100dvh-64px)] md:min-h-[calc(100dvh-72px)] overflow-auto px-[var(--px)]"      >        <NuxtPage />      </div>      <Toolbar />    </NuxtLayout>  </UApp></template><style></style>
